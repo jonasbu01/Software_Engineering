@@ -1,3 +1,3 @@
-Anika Tiemann
-Adrian Belz
+Anika Tiemann,
+Adrian Belz,
 Jonas Bucher
