@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpler Taschenrechner</title>
+</head>
+<body>
+
+<!-- Eingabefeld -->
+<input type="text" id="inputField" placeholder="Zahl eingeben">
+
+<!-- Additionsbutton -->
+<button onclick="addNumbers()">Addieren</button>
+
+<!-- Ausgabefeld -->
+<p id="outputField"></p>
+
+<script>
+    // Funktion zum Addieren von Zahlen
+    function addNumbers() {
+        // Eingabefeld-Wert abrufen
+        const inputValue = document.getElementById('inputField').value;
+
+        // Überprüfen, ob die Eingabe eine Zahl ist
+        if (!isNaN(inputValue)) {
+            // Eingabe zu einer Zahl konvertieren und mit 5 addieren (Beispiel)
+            const result = parseFloat(inputValue) + 5;
+
+            // Ergebnis im Ausgabefeld anzeigen
+            document.getElementById('outputField').innerText = `Ergebnis: ${result}`;
+        } else {
+            // Fehlermeldung anzeigen, wenn die Eingabe keine Zahl ist
+            document.getElementById('outputField').innerText = 'Ungültige Eingabe. Bitte geben Sie eine Zahl ein.';
+        }
+    }
+</script>
+
+</body>
+</html>
