@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Seite mit Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function handleClick() {
+            var outputElement = document.getElementById('output');
+            outputElement.innerHTML = 'Button wurde geklickt!';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Coole HTML-Seite mit Button</h1>
+    </header>
+    <div class="container">
+        <button onclick="handleClick()">Klick mich!</button>
+        <div id="output"></div>
+    </div>
+    <p>Zurück zur Hauptseite : <a href="first_webpage.html">Link</a></p>
+</body>
+</html>
