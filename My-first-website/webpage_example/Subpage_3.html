@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Seite mit Button</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function handleClick() {
+            var outputElement = document.getElementById('output');
+            outputElement.innerHTML = 'Button wurde geklickt!';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Coole HTML-Seite mit Button</h1>
+    </header>
+    <div class="container">
+        <button onclick="handleClick()">Klick mich!</button>
+        <div id="output"></div>
+    </div>
+    <p>Zurück zur Hauptseite : <a href="first_webpage.html">Link</a></p>
+</body>
+</html>

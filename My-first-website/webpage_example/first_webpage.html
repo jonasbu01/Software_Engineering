@@ -2,21 +2,35 @@
 <html>
 <head>
 	<title>Version Control System</title>
-<script>
-	function showCurrentTime() {
-		var currentTime = new Date().toLocaleTimeString();
-		document.getElementById('timeDisplay').innerText = currentTime;
-	}
-</script>
+	<script>
+		function showCurrentTime() {
+			var currentTime = new Date().toLocaleTimeString();
+			document.getElementById('timeDisplay').innerText = currentTime;
+		}
+
+		function showImage() {
+			var imageUrl = 'https://c8.alamy.com/compde/apf7hm/niedliche-kleine-pony-tier-lacheln-lustige-pferde-apf7hm.jpg';  
+			var imageElement = document.getElementById('imageDisplay');
+			imageElement.src = imageUrl;
+			imageElement.style.display = 'block'; // Zeige das Bild an
+		}
+	</script>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<p>Hello Anika! I am a P tag, normally used for paragraphs</p>
-	<p id="demo1">Here is the starting text</p>
+	<h1>Hauptseite</h1>
 
-	<button onclick="showCurrentTime()">Click me to display Time.</button>
-    <div id="timeDisplay"></div>
+	<button onclick="showCurrentTime()">Klicke, um die aktuelle Zeit zu sehen.</button>
+	<div id="timeDisplay"></div>
 
+	<p>Link zu einem Video : <a href="Subpage_1.html">Link</a></p>
+	<p>Link zum Addierer : <a href="Subpage_2.html">Link</a></p>
+	<p>Link zum Button : <a href="Subpage_3.html">Link</a></p>
+
+	<!-- Neuer Button für das Bild -->
+	<button onclick="showImage()">Klicke, um das Bild anzuzeigen.</button>
+	<img id="imageDisplay" style="display: none;" alt="Bild wird hier angezeigt">
 
 </body>
 
