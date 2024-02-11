@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simpler Taschenrechner</title>
+    <title>Neue Seite mit zwei Eingabefeldern</title>
 </head>
 <body>
 
-<!-- Eingabefeld -->
-<input type="text" id="inputField" placeholder="Zahl eingeben">
+<h1>Willkommen auf der neuen Seite mit zwei Eingabefeldern!</h1>
+
+<!-- Erstes Eingabefeld -->
+<label for="inputField1">Eingabefeld 1:</label>
+<input type="text" id="inputField1" placeholder="Zahl eingeben">
+
+<!-- Zweites Eingabefeld -->
+<label for="inputField2">Eingabefeld 2:</label>
+<input type="text" id="inputField2" placeholder="Zahl eingeben">
 
 <!-- Additionsbutton -->
 <button onclick="addNumbers()">Addieren</button>
@@ -19,22 +26,23 @@
 <script>
     // Funktion zum Addieren von Zahlen
     function addNumbers() {
-        // Eingabefeld-Wert abrufen
-        const inputValue = document.getElementById('inputField').value;
+        // Eingabefeld-Werte abrufen
+        const inputValue1 = document.getElementById('inputField1').value;
+        const inputValue2 = document.getElementById('inputField2').value;
 
-        // Überprüfen, ob die Eingabe eine Zahl ist
-        if (!isNaN(inputValue)) {
-            // Eingabe zu einer Zahl konvertieren und mit 5 addieren (Beispiel)
-            const result = parseFloat(inputValue) + 5;
+        // Überprüfen, ob die Eingaben Zahlen sind
+        if (!isNaN(inputValue1) && !isNaN(inputValue2)) {
+            // Eingaben zu Zahlen konvertieren und addieren
+            const result = parseFloat(inputValue1) + parseFloat(inputValue2);
 
             // Ergebnis im Ausgabefeld anzeigen
             document.getElementById('outputField').innerText = `Ergebnis: ${result}`;
         } else {
-            // Fehlermeldung anzeigen, wenn die Eingabe keine Zahl ist
-            document.getElementById('outputField').innerText = 'Ungültige Eingabe. Bitte geben Sie eine Zahl ein.';
+            // Fehlermeldung anzeigen, wenn die Eingabe keine Zahlen sind
+            document.getElementById('outputField').innerText = 'Ungültige Eingabe. Bitte geben Sie Zahlen ein.';
         }
     }
 </script>
-
+<p>Zurück zur Hauptseite : <a href="first_webpage.html">Link</a></p>
 </body>
 </html>
